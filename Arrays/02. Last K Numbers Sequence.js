@@ -7,14 +7,13 @@ function fib(n, k) {
         if (startIndex < 0) {
             startIndex = 0;
         }
-        // let endIndex = arr.length+1
         let resArr = arr.slice(startIndex)
         let sum = resArr.reduce((a,b) => a+b)
         arr.push(sum);
         sum = 0;
     }
 
-    console.log(arr);
+    return arr
 
 }
 
