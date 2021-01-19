@@ -5,8 +5,6 @@ function solve(input){
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
-
-    input = input.split(/\s/).join('');
     
     let ident = '   ';
     let table = `<table>\n${ident}<tr>`;
@@ -20,13 +18,6 @@ function solve(input){
 
         table += `<th>${line}</th>`;
     }
-    
-    // let students = JSON.parse(input);
-    // let first = students[0];
-    // let html = "<table>";
-
-    // html +=`\n   <tr>${Object.keys(first).map(x=>`<th>${escapedInput(x)}</th>`).join('')}</tr>\n`;
-
     for (let i = 0; i < students.length; i++) {
         table += `</tr>\n${ident}<tr>`;
 
@@ -41,14 +32,6 @@ function solve(input){
 
     table += '</tr>\n</table>';
     return table;
-
-    // students.forEach(student =>{
-    //     let objValue = Object.values(student).map(x=>`<td>${x}</td>`).join('')
-    //     html +=`   <tr>${objValue}</tr>\n`
-    // });
-    
-    // html +='</table>\n'
-    // console.log(html);
 }
 
 console.log(solve('[{"Name":"Pesho","Score":4," Grade":8},{"Name":"Gosho","Score":5," Grade":8},{"Name":"Angel","Score":5.50," Grade":10}]'))
