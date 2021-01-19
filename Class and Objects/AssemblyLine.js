@@ -1,6 +1,6 @@
 function createAssemblyLine(){
 
-    let labrary = {
+    let library = {
         hasClima: function (obj){
                 obj.temp = 21,
                 obj.tempSettings = 21,
@@ -43,7 +43,7 @@ function createAssemblyLine(){
         }
     }
  
-    return labrary
+    return library
 }
 
 const assemblyLine = createAssemblyLine();
