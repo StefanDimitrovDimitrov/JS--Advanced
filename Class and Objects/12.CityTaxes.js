@@ -1,4 +1,4 @@
-function city(name, population, treasury){
+function city(name, population, treasury) {
     const city = {
         name: name,
         population: population,
@@ -7,8 +7,12 @@ function city(name, population, treasury){
         collectTaxes() {
             this.treasury += this.population * this.taxRate;
         },
-        applyGrowth(percent){},
-        applyRecession(percent){},
+        applyGrowth(percent) {
+            this.population += Math.floor(this.population * percent / 100);
+        },
+        applyRecession(percent) {
+            this.treasury -= Math.ceil(this.treasury * percent / 100);
+        },
 
     };
 
@@ -19,4 +23,4 @@ city(
     'Tortuga',
     7000,
     15000
-    )
+)
