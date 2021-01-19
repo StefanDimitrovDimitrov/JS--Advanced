@@ -1,7 +1,7 @@
 function solve(arr){
 
     obj = {}
-
+    
     for (const key in arr) {
         if(key%2 == 0){
             obj[arr[key]]=Number(arr[Number(key)+1])
