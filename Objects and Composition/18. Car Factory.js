@@ -10,7 +10,7 @@ function carFactory(obj){
     }else{
         engine = {power: 200, volume: 3500 };
     }
-
+    // return engine.find(el => el.power >= power);
     let carCarriage = {type: carriage, color, color};
 
     let size = wheelsize % 2 === 0? --wheelsize : wheelsize;
