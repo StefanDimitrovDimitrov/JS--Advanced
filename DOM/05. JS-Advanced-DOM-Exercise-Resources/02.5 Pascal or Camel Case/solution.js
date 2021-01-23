@@ -1,25 +1,48 @@
 function solve() {
-  let text = getElementById("text").value
-  let convention = getElementById("naming-convention").value
+  let text = document.getElementById("text").value
+
+  let convention = document.getElementById("naming-convention").value
+
+  console.log(text);
+  if (!text.includes('')){
+    text = text + " "
+  }
+
+  let arrText = text.split(' ');
+  console.log(arrText);
+  let btn = document.getElementsByTagName('input');
+  btn[0].addEventListener("click", result())
   
-  let btn = document.getElementsByTagName("button")[0];
-  btn.addEventListener("click", result)
-  text = text.split(" ");
 
   function result(){
-    if (convention = "Camel Case"){
+    console.log(arrText);
+    console.log(convention);
+    if (convention == "Camel Case"){
       result = []
-      firstWord = text.shift().toLowerCase
+      let firstword = arrText.shift().toLowerCase()
       result.push(firstword)
-      for (const word of text) {
-        word[0].toUpperCase
-        result.push(word)
+      for (let word of arrText) {
+        word =word.toLowerCase()
+        word = word.charAt(0).toUpperCase() + word.substring(1);
+        result.push(word.trim())
+        
       }
+      resultString = result.join('')
+      console.log(resultString);
+      document.getElementById('result').innerHTML = resultString
+    }else if(convention == "Pascal Case"){
+      result = []
+      for (let word of arrText) {
+        word = word.toLowerCase()
+        word = word.charAt(0).toUpperCase() + word.substring(1);
+        result.push(word.trim())
+        
+      }
+      resultString = result.join('')
+      console.log(resultString);
+      document.getElementById('result').innerHTML = resultString
+    }else{
+      document.getElementById('result').innerHTML = "Error!"
     }
-    // }else if(convention = "Pascal Case"){
-    // //'''
-    // }else{
-    //   //...
-    // }
   }
 }
