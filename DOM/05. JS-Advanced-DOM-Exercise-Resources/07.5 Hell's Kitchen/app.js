@@ -21,7 +21,7 @@ function solve() {
          }
 
          if(restaurants[name]){
-            workers= workers.concat(restaurants[name].wokers);
+            workers= workers.concat(restaurants[name].workers);
          }
 
          workers.sort((worker1,worker2) => worker2.salary - worker1.salary);
@@ -42,7 +42,7 @@ function solve() {
       let best = '';
 
       for(const name in restaurants){
-         if (restaurants[name].averageSalary >= bestRestaurantSalary){
+         if (restaurants[name].averageSalary > bestRestaurantSalary){
             best = {
                name,
                workers: restaurants[name].workers,
