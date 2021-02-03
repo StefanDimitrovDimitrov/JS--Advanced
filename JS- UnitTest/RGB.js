@@ -35,6 +35,22 @@ describe('rgbToHexColor', () => {
         expect(rgbToHexColor(256, 0, 0)).to.be.undefined;
     })
 
+    it('returns undefined for negative', () => {
+        expect(rgbToHexColor(0, -1, 0)).to.be.undefined;
+    })
+
+    it('returns undefined for value > 255', () => {
+        expect(rgbToHexColor(0, 0, 256)).to.be.undefined;
+    })
+
+    it('returns undefined for negative', () => {
+        expect(rgbToHexColor(0, 0, -1)).to.be.undefined;
+    })
+
+    it('returns undefined for value > 255', () => {
+        expect(rgbToHexColor(0, 256, 0)).to.be.undefined;
+    })
+
     // test overloading
 
     it('coverts (151, 104, 172) to hex', () => {

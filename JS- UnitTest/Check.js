@@ -15,6 +15,10 @@ describe('isSymmetric', () =>{
         expect(isSymmetric('a')).to.be.false;
     });
 
+    it('returns false for type checking', () =>{
+        expect(isSymmetric(['1', 1])).to.be.false;
+    });
+
     // test overloading
     it('return true for valid odd-element', () =>{
         expect(isSymmetric([1,1,1])).to.true
