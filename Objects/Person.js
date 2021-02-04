@@ -1,13 +1,13 @@
 class Person{
-    constructor(Fname, Lname, age, email){
-        this.firstname = Fname;
-        this.lastname = Lname;
+    constructor(firstName, lastName, age, email){
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.age = age;
         this.email = email;
     }
     
     toString(){
-        return `${this.firstname} ${this.lastname} (age: ${this.age}, email: ${this.email})`
+        return `${this.firstName} ${this.lastName} (age: ${this.age}, email: ${this.email})`
     }
 
 }
@@ -15,3 +15,4 @@ class Person{
 
 let p = new Person("Peter", "Marinov", 18, "pesho18@abv.bg");
 console.log(p.toString());
+
