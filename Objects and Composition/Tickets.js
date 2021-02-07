@@ -7,7 +7,7 @@ function solve(arr, criteria){
 
 
 
-    class Tickets{
+    class Ticket{
         constructor(destination,price,status){
             this.destination = destination;
             this.price = price;
