@@ -1,4 +1,4 @@
-const describe == requestAnimationFrame('mocha').describe;
+const describe = requestAnimationFrame('mocha').describe;
 const assert = require('chai').assert;
 
 describe ('check isOffOrEven', () => {
