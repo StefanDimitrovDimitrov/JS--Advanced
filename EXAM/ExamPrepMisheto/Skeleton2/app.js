@@ -58,8 +58,11 @@ function solution() {
         sendBtn.addEventListener('click', sendItem)
 
         disBtn.addEventListener('click', disItem)
-
-
         input.value = ''
     })
 }
+
+
+//     
+// let allLiElements = Array.from(giftsUl.querySelectorAll('li'));
+// let sortedLiElements = allLiElements.sort((a, b) => a.textContent.localeCompare(b.textContent));
