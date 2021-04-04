@@ -5,7 +5,7 @@ function lockedProfile() {
             let unlock = parent.querySelectorAll("input")[1].checked;
             let hiddenDiv = parent.querySelectorAll("div")[0];
             if(unlock){
-                if (btn.textContent = "Show more"){
+                if (btn.textContent == "Show more"){
                     hiddenDiv.style.display = "block";
                     btn.textContent = "Hide it";
 
